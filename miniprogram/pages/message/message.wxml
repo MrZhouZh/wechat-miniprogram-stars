@@ -1,2 +1,54 @@
 <!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<view class="weui-tab">
+    <view class="swiper-tab">
+        <view
+            wx:for="{{tabs}}"
+            wx:key="index"
+            data-index="{{index}}"
+            bindtap="onTabChange"
+            class="swiper-tab-item {{activeTab === index ? 'active' : ''}}"
+        >
+            {{item.text}}
+        </view>
+    </view>
+
+    <swiper current="{{activeTab}}" bindchange="onSwiperChange">
+        <swiper-item>
+            <view class="swiper-item weui-tab__content">
+                <view class="swiper-item__image">
+                    <image src="../../images/nomessage.png" />
+                </view>
+                <view class="swiper-item__title">
+                    <p>消息通知</p>
+                </view>
+                <view class="swiper-item__info">
+                    在知识的星球里遨游
+                </view>
+                <view class="swiper-item__btn">
+                    <button bindtap="jumpToStarsInfo">了解我们</button>
+                </view>
+            </view>
+        </swiper-item>
+
+        <swiper-item>
+            <view class="swiper-item weui-tab__content">
+                <view class="swiper-item__connecthand" bindtap="jumpToMyMessage">
+                    <view class="swiper-item__connecthand-image">
+                        <image src="../../images/hand.png" />
+                    </view>
+                    <view class="swiper-item__connecthand-text">与我相关</view>
+                </view>
+            </view>
+        </swiper-item>
+
+        <swiper-item>
+            <view class="swiper-item weui-tab__content">
+                <view class="swiper-item__selfmessage">
+                    <view class="swiper-item__selfmessage-image">
+                        <image src="../../images/cup.png" />
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

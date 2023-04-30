@@ -115,3 +115,24 @@ interface ICreateStarOption {
      */
     toMain: () => void
 }
+
+
+type TTabItem = {
+    text: string
+}
+interface IMessageOptionData {
+    tabs: TTabItem[]
+    activeTab: number
+}
+
+interface IMessageOption {
+    data: IMessageOptionData
+
+    onTabChange: (e: WechatMiniprogram.BaseEvent) => void
+
+    onSwiperChange: (e: WechatMiniprogram.SwiperChange) => void
+
+    jumpToStarsInfo: () => void
+
+    jumpToMyMessage: () => void
+}

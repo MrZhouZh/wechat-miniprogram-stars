@@ -1,17 +1,57 @@
 // pages/message/message.ts
-Page({
-
+Page<IMessageOptionData, IMessageOption>({
     /**
      * 页面的初始数据
      */
     data: {
-
+        tabs: [],
+        activeTab: 0,
     },
+
+    onTabChange(e) {
+        const { activeTab } = this.data
+        const currentTab = e.target.dataset.index
+        if (currentTab === activeTab) return
+
+        this.setData({
+            activeTab: currentTab
+        })
+    },
+
+    onSwiperChange(e) { 
+        const currentSwiper = e.detail.current
+        this.setData({
+            activeTab: currentSwiper
+        })
+    },
+
+    jumpToStarsInfo() {
+        wx.navigateTo({
+            url: '../message/starsInfo/starsInfo'
+        })
+    },
+
+    jumpToMyMessage() {
+        wx.navigateTo({
+            url: '../message/myMessage/myMessage'
+        })
+    },
+
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad() {
+        const initTabs: TTabItem[] = [
+            { text: '动态' },
+            { text: '与我相关' },
+            { text: '私信' },
+        ]
+
+        this.setData({
+            activeTab: 0,
+            tabs: initTabs
+        })
 
     },
 
