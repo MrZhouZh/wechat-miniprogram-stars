@@ -1,0 +1,8 @@
+<!--pages/starsList/starsList.wxml-->
+<template name="stars_list">
+    <view class="page-bd__stars">
+        <image src="{{starpic}}" />
+        <view class="page-bd__stars-name">{{starName}}</view>
+        <view class="page-bd__stars-user">{{userName}}</view>
+    </view>
+</template>

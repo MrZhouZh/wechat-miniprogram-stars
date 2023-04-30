@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="page-container">
+    <view class="page-container__image">
+        <image src="../../images/star.png" />
+    </view>
+    <view class="page-container__title">知识星球</view>
+    <view class="page-container__desc">在知识的星球里遨游</view>
+    <!-- <view>
+        <button type="default" bindtap="bindViewTap">jump to log</button>
+    </view> -->
+</view>

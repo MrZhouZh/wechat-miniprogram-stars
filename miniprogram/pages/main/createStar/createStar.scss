@@ -1,0 +1,145 @@
+/* pages/main/createStar/createStar.wxss */
+.page {
+    &-container {
+        margin: auto;
+        widows: 100%;
+        height: 100vh;
+        z-index: 5;
+    }
+    &-title {
+        margin: auto;
+        width: 714rpx;
+        height: 93rpx;
+        border-bottom: 1px solid #edecee;
+        
+        &__title {
+            text-indent: 265rpx;
+            float: left;
+            font-size: 32rpx;
+            line-height: 93rpx;
+        }
+        &__finish {
+            line-height: 93rpx;
+            font-size: 32rpx;
+            text-indent: 170rpx;
+            color: #14b392;
+        }
+    }
+    &-hd {
+        text-align: center;
+        margin: auto;
+        margin-top: 46rpx;
+        width: 290rpx;
+        height: 402rpx;
+        border: 1px solid #edecee;
+        border-radius: 15rpx;
+        background: white;
+        &__star image {
+            margin: auto;
+            border-radius: 15rpx;
+            width: 290rpx;
+            height: 292rpx;
+        }
+        &__text input {
+            font-size: 32rpx;
+            width: 290rpx;
+            height: 90rpx;
+            line-height: 90rpx;
+            color: #a2a3a7;
+        }
+    }
+    &-bd {
+        &__text {
+            margin-top: 20rpx;
+            color: #4b4c4e;
+            text-align: center;
+            font-size: 26rpx;
+        }
+        &__choose {
+            margin: auto;
+            text-align: center;
+            margin-top: 30rpx;
+            width: 714rpx;
+            display: grid;
+            -ms-grid-template-columns: repeat(4,1fr);
+            -ms-grid-template-rows: repeat(2,67rpx);
+            -ms-grid-gap: 18rpx;
+            -moz-grid-template-columns: repeat(4,1fr);
+            -moz-grid-template-rows: repeat(2,67rpx);
+            -moz-grid-gap: 18rpx;
+            -webkit-grid-template-columns: repeat(4,1fr);
+            -webkit-grid-template-rows: repeat(2,67rpx);
+            -webkit-grid-gap: 18rpx;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(2,67rpx);
+            grid-gap: 18rpx;
+        }
+        &__choosebtn {
+            border: 1px solid #a2a3a7;
+            border-radius: 33rpx;
+            line-height: 67rpx;
+            color: #a2a3a7;
+            font-size: 26rpx;
+            // &:active {
+            //     background: #14b392;
+            //     color: white;
+            // }
+            // &:hover {
+            //     background: #14b392;
+            //     color: white;
+            // }
+        }
+    }
+    &-ft {
+        margin: auto;
+        margin-top: 40rpx;
+        width: 672rpx;
+        height: 344rpx;
+        background: white;
+        border: 1px solid #edecee;
+        border-radius: 15rpx;
+        
+        &__intro {
+            font-size: 28rpx;
+            padding: 20rpx 30rpx;
+            width: 100%;
+            height: 100%;
+            color: #a2a3a7;
+            box-sizing: border-box;
+        }
+    }
+}
+.hiddenBack {
+    position: absolute;
+    z-index: 7;
+    background: black;
+    width: 100%;
+    height: 100vh;
+    opacity: .7;
+}
+.chooseBack {
+    position: absolute;
+    margin-top: 1024rpx;
+    z-index: 9;
+    width: 100%;
+    height: 183.3rpx;
+    background: white;
+    white-space: nowrap;
+    display: inline-block;
+}
+.backitem1 {
+    width: 161rpx;
+    height: 161rpx;
+    margin-top: 10rpx;
+    padding-left: 10rpx;
+    position: relative;
+}
+.active {
+    position: absolute;
+    width: 47.2rpx;
+    height: 47.2rpx;
+    margin-top: 70rpx;
+    margin-left: -100rpx;
+    background: white;
+    border-radius: 28.6rpx;
+}

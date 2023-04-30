@@ -1,0 +1,121 @@
+/* pages/main.wxss */
+.container {
+    margin: auto;
+    padding: 10px 10px;
+    width: 700rpx;
+    box-sizing: border-box;
+  }
+  
+  .page {
+    &-hd {
+      &__search {
+        margin: auto;
+        width: 680rpx;
+        height: 62rpx;
+        color: gray;
+        font-size: 30rpx;
+        line-height: 62rpx;
+        border-radius: 31rpx;
+        background-color: #ebecee;
+      }
+  
+      image {
+        width: 33rpx;
+        height: 33rpx;
+        margin-left: 44rpx;
+      }
+    }
+  
+    &-bd {
+      margin: auto;
+      margin-top: 44rpx;
+      width: 633rpx;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: repeat(2,402rpx);
+      grid-gap: 56rpx;
+  
+      // 没有show的样式
+      &__stars {
+        width: 289rpx;
+        height: 402rpx;
+        border: 2rpx solid #edecee;
+        border-radius: 15rpx;
+  
+        image {
+          margin: auto;
+          border-radius: 15rpx;
+          width: 289rpx;
+          height: 283rpx;
+        }
+      }
+  
+      &_stars {
+        &-name {
+          text-align: center;
+          color: #525357;
+          font-size: 32rpx;
+        }
+  
+        &-user {
+          text-align: center;
+          font-size: 26rpx;
+          color: #76777b;
+          margin-top: 20rpx;
+  
+          &::before {
+            content: '';
+            position: absolute;
+            width: 70rpx;
+            height: 10rpx;
+            margin-top: -10rpx;
+            margin-left: 4rpx;
+            border-top: 1rpx solid #b9babe;
+          }
+        }
+      }
+  
+      &__create {
+        // width: 289rpx;
+        // height: 402rpx;
+        // border: 2rpx solid #edecee;
+        // border-radius: 15rpx;
+  
+        width: 280rpx;
+        height: 394rpx;
+        border: 5rpx dotted #b3b3b3;
+        border-radius: 15rpx;
+  
+        &:hover {
+          border: 5rpx dotted #14b392;
+          background: #edecee;
+        }
+  
+        &-text {
+          font-size: 30rpx;
+          color: #b3b3b3;
+          text-align: center;
+          margin-top: 240rpx;
+  
+          &::before {
+            content: '';
+            position: absolute;
+            width: 110rpx;
+            height: 100rpx;
+            margin-top: -69rpx;
+            margin-left: 5rpx;
+            border-top: 3px solid #adadad;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            width: 110rpx;
+            height: 110rpx;
+            margin-top: -122rpx;
+            margin-left: -173rpx;
+            border-right: 3px solid #adadad;
+          }
+        }
+      }
+    }
+  }

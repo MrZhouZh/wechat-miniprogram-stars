@@ -1,0 +1,51 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/main/main",
+        "pages/main/createStar/createStar",
+        "pages/starsList/starsList",
+        "pages/me/me",
+        "pages/me/wallet/wallet",
+        "pages/me/myPush/myPush",
+        "pages/me/ActiveStarsRank/ActiveStarsRank",
+        "pages/message/message",
+        "pages/message/myMessage/myMessage",
+        "pages/message/starsInfo/starsInfo"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#7A7E83",
+        "selectedColor": "#3cc51f",
+        "borderStyle": "black",
+        "backgroundColor": "white",
+        "list": [
+            {
+                "text": "星球",
+                "pagePath": "pages/main/main",
+                "iconPath": "images/stars.png",
+                "selectedIconPath": "images/stars_sel.png"
+            },
+            {
+                "text": "动态",
+                "pagePath": "pages/message/message",
+                "iconPath": "images/message.png",
+                "selectedIconPath": "images/message_sel.png"
+            },
+            {
+                "text": "我",
+                "pagePath": "pages/me/me",
+                "iconPath": "images/me.png",
+                "selectedIconPath": "images/me_sel.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "resizable": true
+}

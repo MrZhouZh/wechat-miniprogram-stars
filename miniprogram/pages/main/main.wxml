@@ -1,0 +1,29 @@
+<!--pages/main.wxml-->
+<import src="../starsList/starsList.wxml" />
+<view class="container">
+  <view class="page-hd center">
+    <navigator>
+      <view class="page-hd__search center">
+        <image src="../../images/search.png" />
+        搜索星球或内容
+      </view>
+    </navigator>
+  </view>
+  <view class="page-bd">
+    <block wx:if="{{display}}" wx:for="{{newstars}}" wx:key="index">
+      <view class="page-bd__stars">
+        <image src="{{item.starpic}}" />
+        <view class="page-bd__stars-name">{{item.starName}}</view>
+        <view class="page-bd__stars-user">{{stars[0].userName}}</view>
+      </view>
+    </block>
+    <block wx:for="{{stars}}" wx:key="index">
+      <template is="stars_list" data="{{...item}}" />
+    </block>
+    <view class="page-bd__create" bindtap="onCreateStar">
+      <view class="page-bd__create-text">
+        创建星球
+      </view>
+    </view>
+  </view>
+</view>

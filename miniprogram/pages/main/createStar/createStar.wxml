@@ -1,0 +1,46 @@
+<!--pages/main/createStar/createStar.wxml-->
+<view wx:if="{{display}}" class="hiddenBack" bindtap="finishChoose" />
+
+<scroll-view scroll-x wx:if="{{display}}" class="chooseBack">
+    <view class="backitem">
+        <block wx:for="{{showList}}" wx:key="index">
+            <image
+                class="backitem1"
+                data-index="{{index}}"
+                bindtap="onPic"
+                src="{{'../../../images/stars' + (index + 1) + '.png'}}"
+            />
+            <image wx:if="{{item}}" class="{{activeIndex === index ? 'active' : ''}}" src="../../../images/this.png" />
+        </block>
+    </view>
+</scroll-view>
+
+<view class="page-container">
+    <view class="page-title">
+        <view class="page-title__title">创建免费星球</view>
+        <view class="page-title__finish" bindtap="toMain">完成</view>
+    </view>
+    <view class="page-hd">
+        <view class="page-hd__star" bindtap="chooseImage"><image src="{{starpic}}"/></view>
+        <view class="page-hd__text">
+            <input bindinput="bindStarNameInput" type="text" placeholder="星球名字" value="{{starName}}"/>
+        </view>
+    </view>
+    <view class="page-bd">
+        <view class="page-bd__text">选择所属星球类别(必选)</view>
+        <view class="page-bd__choose">
+            <view
+                class="page-bd__choosebtn"
+                wx:for="{{starCategories}}"
+                wx:key="index"
+                data-index="{{index}}"
+                bindtap="onChooseCategory"
+                style="{{'background:' + item.bgColor + ';color:' + item.textColor}}"
+            >{{item.text}}</view>
+        </view>
+    </view>
+    <view class="page-ft">
+        <!-- <input type="text" placeholder="星球简介(选填)"/> -->
+        <textarea class="page-ft__intro" bindinput="onStarIntro" placeholder="星球简介(选填)" value="{{starIntro}}" />
+    </view>
+</view>
