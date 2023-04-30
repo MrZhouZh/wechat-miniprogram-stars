@@ -47,5 +47,6 @@
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json",
-    "resizable": true
+    "resizable": true,
+    "lazyCodeLoading": "requiredComponents"
 }
