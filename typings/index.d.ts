@@ -6,7 +6,7 @@ interface IAppOption {
     }
     userInfoReadyCallback?: WechatMiniprogram.GetUserInfoSuccessCallback,
 }
-  
+
 interface StarItem {
     starpic: string
     starName: string
@@ -128,11 +128,42 @@ interface IMessageOptionData {
 interface IMessageOption {
     data: IMessageOptionData
 
+    /**
+     * 点击 Tab 切换
+     */
     onTabChange: (e: WechatMiniprogram.BaseEvent) => void
 
+    // 滑动切换
     onSwiperChange: (e: WechatMiniprogram.SwiperChange) => void
 
+    /**
+     * 跳转至我
+     */
     jumpToStarsInfo: () => void
 
+    /**
+     * 跳转至私信页
+     */
     jumpToMyMessage: () => void
+}
+
+interface IMeOptionData {
+    userPic: string
+    name: string
+    starslen: number
+    collectLen: number
+}
+
+interface IMeOption {
+    data: IMeOptionData
+
+    getUserInfo: () => void
+    
+    getUserProfile: () => void
+
+    toMyPush: () => void
+
+    toWallet: () => void
+
+    toRank: () => void
 }
