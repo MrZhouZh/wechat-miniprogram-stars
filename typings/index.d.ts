@@ -1,9 +1,6 @@
 /// <reference path="./types/index.d.ts" />
 
 interface IAppOption {
-    data: {
-      currentUser: number,
-    }
     globalData: {
       userInfo?: WechatMiniprogram.UserInfo,
     }

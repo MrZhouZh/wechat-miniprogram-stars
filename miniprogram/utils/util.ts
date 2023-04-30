@@ -17,3 +17,10 @@ const formatNumber = (n: number) => {
   const s = n.toString()
   return s[1] ? s : '0' + s
 }
+
+/**
+ * 延迟运行
+ * @param ms default: 3
+ */
+export const sleep = (ms: number = 3) =>
+    new Promise(resolve => setTimeout(resolve, ms * 1000))
