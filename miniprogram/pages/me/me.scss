@@ -8,12 +8,13 @@
     &-hd {
         width: 100%;
         height: 469rpx;
+        padding-top: 60rpx;
         background: white;
+        box-sizing: border-box;
         &__info{
             margin: auto;
             width: 480rpx;
-            height: 469rpx;
-            background: white;
+            // background: rgb(212, 207, 207);
         }
         
         &__pic {

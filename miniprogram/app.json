@@ -16,7 +16,7 @@
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Weixin",
+        "navigationBarTitleText": "星球迷航",
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
