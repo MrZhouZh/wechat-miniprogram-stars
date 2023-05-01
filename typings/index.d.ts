@@ -167,3 +167,18 @@ interface IMeOption {
 
     toRank: () => void
 }
+
+interface IWalletOptionData {
+    totalMoney: number,
+    operableMoney: number,
+    setMoney: number
+}
+
+interface IWalletOption {
+    data: IWalletOptionData
+    
+    /**
+     * 获取用户钱包信息
+     */
+    getWalletMoney: () => void
+}

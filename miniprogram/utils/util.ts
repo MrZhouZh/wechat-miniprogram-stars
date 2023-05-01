@@ -24,3 +24,12 @@ const formatNumber = (n: number) => {
  */
 export const sleep = (ms: number = 3) =>
     new Promise(resolve => setTimeout(resolve, ms * 1000))
+
+/**
+ * 随机一个区间的数字
+ * @param min 最小值
+ * @param max 最大值
+ */
+export const randomN = (min: number, max: number) => {
+    return Math.floor(Math.random() * (max - min + min))
+}

@@ -1,18 +1,32 @@
 // pages/me/wallet/wallet.ts
-Page({
+import { sleep, randomN } from '../../../utils/util'
+
+Page<IWalletOptionData, IWalletOption>({
 
     /**
      * 页面的初始数据
      */
     data: {
+        totalMoney: 0,
+        operableMoney: 0,
+        setMoney: 0
+    },
 
+    async getWalletMoney() {
+        await sleep(1.5)
+
+        this.setData({
+            totalMoney: randomN(3000, 5000),
+            operableMoney: randomN(1000, 2500),
+            setMoney: randomN(1000, 2000)
+        })
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad() {
-
+        this.getWalletMoney()
     },
 
     /**
