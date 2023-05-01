@@ -31,5 +31,5 @@ export const sleep = (ms: number = 3) =>
  * @param max 最大值
  */
 export const randomN = (min: number, max: number) => {
-    return Math.floor(Math.random() * (max - min + min))
+    return Math.floor(Math.random() * (max - min)) + min
 }

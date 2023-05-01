@@ -2,7 +2,6 @@
 import { sleep, randomN } from '../../../utils/util'
 
 Page<IWalletOptionData, IWalletOption>({
-
     /**
      * 页面的初始数据
      */
@@ -14,11 +13,15 @@ Page<IWalletOptionData, IWalletOption>({
 
     async getWalletMoney() {
         await sleep(1.5)
-
+        let [totalMoney, operableMoney, setMoney] = [0, 0, 0];
+        totalMoney = randomN(3000, 5000);
+        operableMoney = randomN(100, totalMoney);
+        setMoney = totalMoney - operableMoney;
+        
         this.setData({
-            totalMoney: randomN(3000, 5000),
-            operableMoney: randomN(1000, 2500),
-            setMoney: randomN(1000, 2000)
+            totalMoney,
+            operableMoney,
+            setMoney
         })
     },
 
