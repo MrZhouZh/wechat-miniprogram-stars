@@ -12,7 +12,7 @@ Page<IWalletOptionData, IWalletOption>({
     },
 
     async getWalletMoney() {
-        await sleep(1.5)
+        await sleep(1)
         let [totalMoney, operableMoney, setMoney] = [0, 0, 0];
         totalMoney = randomN(3000, 5000);
         operableMoney = randomN(100, totalMoney);

@@ -12,17 +12,22 @@ Page<IMeOptionData, IMeOption>({
     },
 
     getUserInfo() {
-        wx.getStorage<WechatMiniprogram.UserInfo>({
-            key: 'userInfo',
-            success: res => {
-                console.log(res)
-                const { avatarUrl, nickName } = res.data
-                this.setData({
-                    userPic: avatarUrl,
-                    name: nickName
-                })
-            }
+        this.setData({
+            name: 'Jack',
+            userPic: '../../images/Pic/UserPic2.jpeg'
         })
+        // TODO: 获取用户信息
+        // wx.getStorage<WechatMiniprogram.UserInfo>({
+        //     key: 'userInfo',
+        //     success: res => {
+        //         console.log(res)
+        //         const { avatarUrl, nickName } = res.data
+        //         this.setData({
+        //             userPic: avatarUrl,
+        //             name: nickName
+        //         })
+        //     }
+        // })
     },
 
     getUserProfile() {
@@ -66,6 +71,8 @@ Page<IMeOptionData, IMeOption>({
      * 生命周期函数--监听页面加载
      */
     onLoad() {
+
+        this.getUserInfo()
 
         // this.getUserProfile()
 
