@@ -182,3 +182,17 @@ interface IWalletOption {
      */
     getWalletMoney: () => void
 }
+
+interface IMyPushOptionData {
+    name: string
+    pic: string
+}
+
+interface IMyPushOption {
+    data: IMyPushOptionData
+
+    /**
+     * 获取用户信息 名称/头像
+     */
+    getUserInfo: () => void
+}

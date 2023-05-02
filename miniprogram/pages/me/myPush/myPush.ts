@@ -1,17 +1,26 @@
 // pages/me/myPush/myPush.ts
-Page({
+Page<IMyPushOptionData, IMyPushOption>({
 
     /**
      * 页面的初始数据
      */
     data: {
+        name: '',
+        pic: ''
+    },
 
+    getUserInfo() {
+        this.setData({
+            name: 'Nick',
+            pic: '../../../images/Pic/UserPic1.jpeg'
+        })
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad() {
+        this.getUserInfo()
 
     },
 
