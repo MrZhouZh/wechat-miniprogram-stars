@@ -1,2 +1,6 @@
 <!--pages/message/myMessage/myMessage.wxml-->
-<text>pages/message/myMessage/myMessage.wxml</text>
+<view class="container">
+    <view class="nomessage-image">
+        <image src="../../../images/cup.png" />
+    </view>
+</view>
