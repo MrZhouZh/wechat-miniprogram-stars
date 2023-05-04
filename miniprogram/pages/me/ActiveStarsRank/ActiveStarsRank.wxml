@@ -1,2 +1,4 @@
 <!--pages/me/ActiveStarsRank/ActiveStarsRank.wxml-->
-<text>pages/me/ActiveStarsRank/ActiveStarsRank.wxml</text>
+<view class="container">
+    <text class="center">Nothing to display!</text>
+</view>
