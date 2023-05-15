@@ -1,1 +1,20 @@
 /* pages/message/starsInfo/starsInfo.wxss */
+.container {
+    border-top: 1px solid #dddee0;
+    margin: auto;
+    width: 680rpx;
+    &-info {
+        margin-top: 30rpx;
+        
+        &-title{
+            color: #14B98F;
+        }
+        &-text {
+            view {
+                color: #b7b7b7;
+                font-size: 32rpx;
+                margin-top: 20rpx;
+            }
+        }
+    }
+}
